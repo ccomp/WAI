@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *latText;
+@property (weak, nonatomic) IBOutlet UITextField *longText;
+@property (weak, nonatomic) IBOutlet UILabel *outputText;
+- (IBAction)submitButtonPressed:(id)sender;
+- (void)addressLocation:(float)lat lng:(float)lng;
 
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4010BEC0C0064C8AB9A7487F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E3F0F5ADB22AA7627023176 /* libPods.a */; };
 		AAFE04B31AD8AD7300406609 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFE04B21AD8AD7300406609 /* main.m */; };
 		AAFE04B61AD8AD7300406609 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFE04B51AD8AD7300406609 /* AppDelegate.m */; };
 		AAFE04B91AD8AD7300406609 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFE04B81AD8AD7300406609 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EB9DF65EE28A12FF7FADAA4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9E3F0F5ADB22AA7627023176 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFE04AD1AD8AD7300406609 /* reversegeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reversegeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFE04B11AD8AD7300406609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAFE04B21AD8AD7300406609 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		AAFE04C61AD8AD7300406609 /* reversegeoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reversegeoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFE04CB1AD8AD7300406609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAFE04CC1AD8AD7300406609 /* reversegeoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reversegeoTests.m; sourceTree = "<group>"; };
+		D8D2B2C05A71AAB7ACD7EBFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4010BEC0C0064C8AB9A7487F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		880DAF1F34DA7CBAF046B4F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8D2B2C05A71AAB7ACD7EBFC /* Pods.debug.xcconfig */,
+				5EB9DF65EE28A12FF7FADAA4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AAFE04A41AD8AD7300406609 = {
 			isa = PBXGroup;
 			children = (
 				AAFE04AF1AD8AD7300406609 /* reversegeo */,
 				AAFE04C91AD8AD7300406609 /* reversegeoTests */,
 				AAFE04AE1AD8AD7300406609 /* Products */,
+				880DAF1F34DA7CBAF046B4F1 /* Pods */,
+				E4788ECBF74A49D1F3F00BE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +135,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4788ECBF74A49D1F3F00BE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E3F0F5ADB22AA7627023176 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAFE04D01AD8AD7300406609 /* Build configuration list for PBXNativeTarget "reversegeo" */;
 			buildPhases = (
+				E3157EA787C20A86AFF82296 /* Check Pods Manifest.lock */,
 				AAFE04A91AD8AD7300406609 /* Sources */,
 				AAFE04AA1AD8AD7300406609 /* Frameworks */,
 				AAFE04AB1AD8AD7300406609 /* Resources */,
+				132D20D41986447DC8558BBB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		132D20D41986447DC8558BBB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3157EA787C20A86AFF82296 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AAFE04A91AD8AD7300406609 /* Sources */ = {
@@ -341,8 +400,10 @@
 		};
 		AAFE04D11AD8AD7300406609 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8D2B2C05A71AAB7ACD7EBFC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_NS_ASSERTIONS = NO;
 				INFOPLIST_FILE = reversegeo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,8 +412,10 @@
 		};
 		AAFE04D21AD8AD7300406609 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EB9DF65EE28A12FF7FADAA4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_NS_ASSERTIONS = NO;
 				INFOPLIST_FILE = reversegeo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +475,7 @@
 				AAFE04D21AD8AD7300406609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAFE04D31AD8AD7300406609 /* Build configuration list for PBXNativeTarget "reversegeoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +484,7 @@
 				AAFE04D51AD8AD7300406609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
